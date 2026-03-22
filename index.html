@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopMart – Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Shop<span>Mart</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="cart.html" id="cart-count" class="cart-btn">Cart (0)</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h1>Discover Amazing Products</h1>
+    <p>Shop the latest electronics, fashion, books, and more — all in one place.</p>
+  </section>
+
+  <!-- ===== SEARCH & FILTER CONTROLS ===== -->
+  <div class="controls">
+    <!-- Search bar — DOM filtering on every keystroke -->
+    <div class="search-wrapper">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search products..."
+        autocomplete="off"
+      />
+    </div>
+
+    <!-- Category filter buttons -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="All">All</button>
+      <button class="filter-btn" data-category="Electronics">Electronics</button>
+      <button class="filter-btn" data-category="Fashion">Fashion</button>
+      <button class="filter-btn" data-category="Books">Books</button>
+      <button class="filter-btn" data-category="Home">Home</button>
+      <button class="filter-btn" data-category="Sports">Sports</button>
+    </div>
+  </div>
+
+  <!-- ===== PRODUCTS GRID ===== -->
+  <!-- Product cards are generated dynamically by JavaScript -->
+  <section class="products-section">
+    <h2 class="section-title">Our Products</h2>
+    <div class="products-grid" id="products-container">
+      <!-- JS will inject product cards here using createElement & appendChild -->
+    </div>
+  </section>
+
+  <!-- ===== TOAST NOTIFICATION ===== -->
+  <div id="toast" class="toast"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 <span>ShopMart</span>. Built with HTML, CSS & Vanilla JavaScript.</p>
+  </footer>
+
+  <!-- Load the main JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
