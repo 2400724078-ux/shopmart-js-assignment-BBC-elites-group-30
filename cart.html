@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopMart – Cart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Shop<span>Mart</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="cart.html" id="cart-count" class="cart-btn active">Cart (0)</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="page-header">
+    <h1>🛒 Your Cart</h1>
+    <p>Review your items before checkout</p>
+  </div>
+
+  <!-- ===== CART CONTENT ===== -->
+  <div class="cart-container">
+
+    <!-- Cart items — dynamically rendered by JavaScript -->
+    <div id="cart-items-container">
+      <!-- JS renders cart items here using createElement & appendChild -->
+    </div>
+
+    <!-- Cart Summary — shown only when cart has items -->
+    <div id="cart-summary" class="cart-summary" style="display:none;">
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="summary-subtotal">$0</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span id="summary-shipping">$0</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <span id="summary-total">$0</span>
+      </div>
+      <a href="checkout.html" class="checkout-link">Proceed to Checkout →</a>
+    </div>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 <span>ShopMart</span>. Built with HTML, CSS & Vanilla JavaScript.</p>
+  </footer>
+
+  <!-- Load the main JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
